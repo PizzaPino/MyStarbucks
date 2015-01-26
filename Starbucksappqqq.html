@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Starbucks</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="css/ratchet.css" rel="stylesheet">
+
+    <!-- Include the compiled Ratchet JS -->
+    <script src="js/ratchet.js"></script>
+    
+    <!--Using jQuery and jQuery UI for display effects-->
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+ 
+    <!--Using the hamburger menu display code-->
+    <script src="js/hamburger.js"></script>
+
+    <link rel="stylesheet" type="text/css" media="all" href="css/hamburger.css" />
+
+
+
+<style type="text/css">
+
+      .bar {
+
+        background-color: #006345;
+        height: 44px;
+
+      }
+
+      .title {
+
+        color: #ffffff;
+
+      }
+
+      .icon-bars{
+        color: #ffffff;
+      }
+
+      #notification{
+        vertical-align: middle;
+        filter:alpha(opacity=50); 
+        -moz-opacity: 0.5; 
+        opacity: 0.50;
+      }
+
+      #image_block2{
+        width: 33%;
+        float: left;
+
+      }
+
+      #image_block1{
+        height: 136px;
+        width: 33%;
+        float: left;
+      }
+
+       #image_block3{
+        height: 136px;
+        width: 33%;
+        float: left;
+      }
+
+      #soc{
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+    
+      #soctext{
+        text-align: center;
+        width: 100%;
+      }
+
+      #image_container{
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        height: 40%;
+      }
+
+      #footer{
+        position: absolute;
+        background-color: #006345; 
+        bottom: 0px;
+        width: 100%;
+        height: 2%;
+      }
+
+      #activities_container{
+        position: absolute;
+        width: 100%;
+        height: 45%;
+        top: 44px;
+      }
+
+      #activities_Text{
+        display: table;
+        width: 100%;
+        text-align: center;
+        height: 15%;
+
+      }
+      #activities_carousel{
+        position: absolute;
+        background-color: #a7a7a7; 
+        width: 100%;
+        height: 85%
+      }
+
+      #span_act {
+         display: table-cell;
+        vertical-align: middle;
+      }
+
+
+
+    nav {
+    opacity: 0;
+    left: 0px;
+    top: 0px;
+    position: fixed;
+    z-index: 0;
+    width: 70%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #3e3c3d;
+    background: -moz-linear-gradient(top, #3e3c3d 0%, #2d2c2d 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3e3c3d), color-stop(100%, #2d2c2d));
+    background: -webkit-linear-gradient(top, #3e3c3d 0%, #2d2c2d 100%);
+    background: -o-linear-gradient(top, #3e3c3d 0%, #2d2c2d 100%);
+    background: -ms-linear-gradient(top, #3e3c3d 0%, #2d2c2d 100%);
+    background: linear-gradient(to bottom, #3e3c3d 0%, #2d2c2d 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3e3c3d', endColorstr='#2d2c2d', GradientType=0)
+      }
+
+    /*
+The Layer that will be layed over the content
+so that the content is unclickable while menu is shown
+*/
+
+
+/*
+using background color is important to cover the menu
+position absolute isset to cover the whole viewport
+*/
+
+
+
+
+
+      </style>
+
+  </head>
+<body>
+
+  overflow-x:hidden;
+
+<header class="bar bar-nav">
+  
+  <h1 class="title">My Starbucks</h1>
+
+  <button class="btn btn-link btn-nav pull-left">
+    <span class="icon icon-bars"></span>
+  </button>
+  <button class="btn btn-link btn-nav pull-right">
+    
+     <img id="notification" src="images/notification.png" height="auto" width="50%"
+     align="center">
+     
+  </button>
+
+</header>
+<nav>
+        <ul>
+            <li><a href="#">menuitem 1</a></li>
+            <li><a href="#">menuitem 2</a></li>
+            <li><a href="#">menuitem 3</a></li>
+            <li><a href="#">menuitem 4</a></li>
+            <li><a href="#">menuitem 5</a></li>
+            <li><a href="#">menuitem 6</a></li>
+        </ul>
+    </nav>
+    <!--The Layer that will be layed over the content
+    so that the content is unclickable while menu is shown-->
+<div id="contentLayer"></div>
+
+<div id="content">
+
+<div id="activities_container">
+  <div id="activities_Text"><span id="span_act">Activities</span></div>
+  <div id="activities_carousel"></div>
+</div>
+
+
+
+<div id="image_container">
+<div id="soctext">Share a Coffee</div>
+<div id="image_block1"></div>
+<div id="image_block2"><img id="soc" src="images/share_button.png"></div>
+<div id="image_block3"></div>
+</div>
+</div>
+
+<div id="footer"></div>
+</body>
+</html>
